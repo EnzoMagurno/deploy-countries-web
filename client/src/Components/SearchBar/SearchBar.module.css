@@ -1,0 +1,23 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+input {
+    padding: 0.5rem;
+    width: 20%;
+    font-size: 1rem;
+    outline: 1px solid #ccc;
+    min-width: 10rem;
+    max-width: 15rem;
+}
+
+input:focus {
+    outline: 1px solid #ccc;
+
+}
+
+input:hover {
+    outline: 1px solid #858484;
+}

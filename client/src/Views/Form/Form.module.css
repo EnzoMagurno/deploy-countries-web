@@ -1,0 +1,32 @@
+.button {
+    padding: 0.5rem;
+    outline: 1px solid #ccc;
+}
+
+.button:hover {
+    padding: 0.5rem;
+    outline: 1px solid #858484;
+}
+
+.seasons select {
+    padding: 0.5rem;
+    outline: 1px solid #ccc;
+}
+
+.seasons select:hover {
+    padding: 0.5rem;
+    outline: 1px solid #858484;
+}
+
+.season {
+    font-size: 1rem;
+}
+
+p {
+    color: rgb(245, 6, 6, 0.8)
+}
+
+.countries {
+    padding: 0.3rem;
+    font-size: 1rem;
+}

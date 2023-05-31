@@ -1,0 +1,27 @@
+.anchor {
+    text-decoration: none;
+    color: black;
+}
+
+.anchor:hover {
+    text-decoration: none;
+    color: rgb(30, 30, 46);
+    text-decoration: underline;
+
+}
+
+.card {
+    padding: 1rem;
+}
+
+.card img {
+    max-width: 320px;
+    max-height: 160px;
+    min-height: 160px;
+    min-width: 320px;
+}
+
+.card h2 {
+    max-width: 320px;
+
+}
