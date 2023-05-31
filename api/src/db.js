@@ -4,8 +4,7 @@ const fs = require('fs');
 const path = require('path');
 const { DB_DEPLOY } = process.env;
 
-const sequelize = new Sequelize(
-  `${DB_DEPLOY}`,
+const sequelize = new Sequelize(DB_DEPLOY,
   {
     logging: false,
     native: false,
