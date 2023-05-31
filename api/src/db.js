@@ -3,10 +3,10 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 // const Activity = require('./models/Activity');
-const { DB_USER, DB_PASSWORD, DB_HOST } = process.env;
+const { DB_DEPLOY } = process.env;
 
 const sequelize = new Sequelize(
-  `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/countries`,
+  `${DB_DEPLOY}`,
   {
     logging: false,
     native: false,

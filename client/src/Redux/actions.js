@@ -16,7 +16,7 @@ export const RESET_PAGE = 'RESET_PAGE'
 export const getCountries = () => {
     return async function (dispatch) {
         try {
-            const countries = (await axios.get(`http://localhost:3001/countries`)).data
+            const countries = (await axios.get(`/countries`)).data
             return dispatch({ type: GET_COUNTRIES, payload: countries })
         } catch (error) {
             console.log(error.message);
@@ -28,7 +28,7 @@ export const getCountries = () => {
 export const getCountry = (id) => {
     return async function (dispatch) {
         try {
-            const country = await axios.get(`http://localhost:3001/countries/${id}`)
+            const country = await axios.get(`/countries/${id}`)
             return dispatch({ type: GET_COUNTRY, payload: country })
         } catch (error) {
             console.log(error.message);
@@ -39,7 +39,7 @@ export const getCountry = (id) => {
 export const getCountryByName = (name) => {
     return async function (dispatch) {
         try {
-            const country = (await axios.get(`http://localhost:3001/countries?name=${name}`)).data
+            const country = (await axios.get(`/countries?name=${name}`)).data
             return dispatch({ type: GET_COUNTRY_BY_NAME, payload: country })
         } catch (error) {
             console.log(error.message);
@@ -50,7 +50,7 @@ export const getCountryByName = (name) => {
 export const getActivities = () => {
     return async function (dispatch) {
         try {
-            const response = (await axios.get('http://localhost:3001/countries/activities/all')).data
+            const response = (await axios.get('/countries/activities/all')).data
             return dispatch({ type: GET_ACTIVITIES, payload: response })
         } catch (error) {
             console.log(error.message);
@@ -61,7 +61,7 @@ export const getActivities = () => {
 export const postActivity = (payload) => {
     return async function (dispatch) {
         try {
-            const response = await axios.post('http://localhost:3001/countries', payload)
+            const response = await axios.post('/countries', payload)
             return dispatch({ type: POST_ACTIVITY, payload: response })
         } catch (error) {
             console.log(error.message);
