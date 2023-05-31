@@ -2,7 +2,6 @@ require('dotenv').config();
 const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
-// const Activity = require('./models/Activity');
 const { DB_DEPLOY } = process.env;
 
 const sequelize = new Sequelize(
