@@ -4,6 +4,8 @@ import NavBar from './Components/NavBar/NavBar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import axios from 'axios';
 axios.defaults.baseURL = 'http://localhost:3001'
+
+
 function App() {
   const location = useLocation()
   return (
