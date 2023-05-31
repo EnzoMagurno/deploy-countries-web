@@ -1,12 +1,12 @@
 const axios = require('axios')
 const { Country } = require('../db.js');
 const { API } = process.env;
-const countriesJSON = require('../countries.json')
 require('dotenv').config();
 
 const countriesDatabase = async (req, res) => {
     try {
-        const data = countriesJSON.map(country => {
+        const response = (await axios.get(API)).data
+        const data = response.map(country => {
             let capital = country.capital;
             if (typeof capital === 'string') {
                 capital = [capital];
@@ -14,7 +14,7 @@ const countriesDatabase = async (req, res) => {
             return {
                 id: country.cca3,
                 name: country.name.common,
-                flag: country.flags[1],
+                flag: country.flags.png,
                 capital: capital,
                 continent: country.region,
                 subregion: country.subregion,
